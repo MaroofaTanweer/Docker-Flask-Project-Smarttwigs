@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: docker-flask
+  name: docker-flask
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: docker-flask
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: docker-flask
+    spec:
+      containers:
+      - image: docker.io/maroofatanweer/flask-docker-app:latest
+        name: docker-flask
+        ports:
+        - containerPort: 5000
+        resources: {}
+status: {}
