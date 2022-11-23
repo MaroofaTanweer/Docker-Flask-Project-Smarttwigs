@@ -17,11 +17,11 @@ A Flask app running on Docker Container and Kubernetes Cluster
 <sub1>4. activate it using source venv/bin/activate</sub1></br>
 <sub1>5. pip install -r requirements.txt to install the app libaries and it dependencies</sub1></br>
 #### Running the app:
-<sub3>After installing, run the server using python app.py . Access the running app in a browser at the URL written to the console (most likely http://localhost:5000)</sub3></br>
+<sub3>After installing, run the server using python app.py . Access the running app in a browser at the URL written to the console or http://ip_address:5050)</sub3></br>
 ## Steps to deploy in Docker: 
 <sub1>1. docker build -t <image_name>:tag . </sub1></br>
 <sub1>1. docker image ls </sub1></br>
-<sub1>2. docker run --name <container_name> -d -p ip_address:5000:5000 <image_name> </sub1></br>
+<sub1>2. docker run --name <container_name> -d -p ip_address:5050:5000 <image_name> </sub1></br>
 <sub1>3. docker ps -a</sub1></br>
  The hostname of the container is 6095273a4e9b and its IP is 172.17.0.2.
 ### Verify the running container
@@ -31,7 +31,7 @@ A Flask app running on Docker Container and Kubernetes Cluster
 ## As a Docker image published in Docker Hub
 <sub4>Docker Hub is a free service to publicly store available images.</sub4></br>
 <sub1> ** you need to install only Docker</sub1></br>
-<sub1>1. just run:  docker run --name <container_name> -d -p ip_address:5000:5000 <image_name> </sub1></br>
+<sub1>1. just run:  docker run --name <container_name> -d -p ip_address:5050:5000 <image_name> </sub1></br>
 <sub1>2. tag the image: docker image tag myimage:tag dockerhubrepository/myimage:tag</sub1></br>
 <sub1>3. log in to DockerHub:  docker login</sub1></br>
 <sub1>4. push the image to the dockerhub: docker image push dockerhubrepository/myimage:tag</sub1></br>
