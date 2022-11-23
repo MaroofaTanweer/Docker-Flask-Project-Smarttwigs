@@ -41,5 +41,6 @@ A Flask app running on Docker Container and Kubernetes Cluster
 <sub1>2. kubectl get deployment </sub1></br>
 <sub1>3. Create service: kubectl apply -f docker-flask-svc.yaml </sub1></br>
 <sub1>4. kubectl get svc</sub1></br>
+<sub2> Access the running app in a browser at the URL: http://host_ipAddress:30010 </sub2></br>
 ## Troubleshooting
 edit the file  /etc/docker/daemon.json and restart the docker service to resolve the error “temporary failure in name resolution')' /simple/flask/” which I got while creating docker image.
