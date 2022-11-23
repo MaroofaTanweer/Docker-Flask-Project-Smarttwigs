@@ -44,3 +44,5 @@ A Flask app running on Docker Container and Kubernetes Cluster
 <sub2> Access the running app in a browser at the URL: http://host_ipAddress:30010 </sub2></br>
 ## Troubleshooting
 edit the file  /etc/docker/daemon.json and restart the docker service to resolve the error “temporary failure in name resolution')' /simple/flask/” which I got while creating docker image.
+
+![image](https://user-images.githubusercontent.com/70618235/203617094-c1662eb8-8c8f-44a7-9b4a-5f5520a03290.png)
