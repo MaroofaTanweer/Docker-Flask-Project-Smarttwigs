@@ -1,5 +1,5 @@
 # Docker-Flask-Project-Smarttwigs
-A Flask app running on Docker and Kubernetes Cluster
+A Flask app running on Docker Container and Kubernetes Cluster
 ## OVERVIEW:
 
 ![image](https://user-images.githubusercontent.com/70618235/203452245-e6726503-1048-4aa4-91d6-7c04679731d1.png)
@@ -23,6 +23,11 @@ A Flask app running on Docker and Kubernetes Cluster
 <sub1>1. docker image ls </sub1></br>
 <sub1>2. docker run --name <container_name> -d -p ip_address:5000:5000 <image_name> </sub1></br>
 <sub1>3. docker ps -a</sub1></br>
+ The hostname of the container is 6095273a4e9b and its IP is 172.17.0.2.
+### Verify the running container
+<sub3>Verify by checking the container ip and hostname (ID):</sub1></br>
+<sub1>$ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' my-container 172.17.0.2</sub1></br>
+<sub1>$ docker inspect -f '{{ .Config.Hostname }}' my-container 6095273a4e9b</sub1></br>
 ## As a Docker image published in Docker Hub
 <sub4>Docker Hub is a free service to publicly store available images.</sub4></br>
 <sub1> ** you need to install only Docker</sub1></br>
